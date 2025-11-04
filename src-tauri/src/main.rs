@@ -6,7 +6,6 @@ use tauri::{Manager, WindowEvent};
 fn main() {
   tauri::Builder::default()
     .setup(|app| {
-      let win = app.get_webview_window("main").unwrap();
       Ok(())
     })
     .run(tauri::generate_context!())
