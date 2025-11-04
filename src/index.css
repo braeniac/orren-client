@@ -1,0 +1,62 @@
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Put global resets & tokens in base */
+@layer base {
+  :root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color: #0f0f0f;
+    background-color: #f6f6f6;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html, body, #root { height: 100%; }
+}
+
+/* Reusable component-style classes using Tailwind utilities */
+@layer components {
+  .container {
+    @apply m-0 pt-[10vh] flex flex-col justify-center text-center;
+  }
+
+  .row {
+    @apply flex justify-center;
+  }
+
+  .btn {
+    @apply rounded-lg border border-transparent px-5 py-2 text-base font-medium 
+           text-neutral-900 bg-white transition-colors shadow-[0_2px_2px_rgba(0,0,0,0.2)]
+           hover:border-[#396cd8] active:border-[#396cd8] active:bg-neutral-200;
+  }
+
+  .link {
+    @apply font-medium text-[#646cff] hover:text-[#535bf2] no-underline;
+  }
+
+  .logo {
+    @apply h-24 p-6 transition-[filter] duration-700 will-change-[filter];
+  }
+
+  .logo-vite:hover   { filter: drop-shadow(0 0 2em #747bff); }
+  .logo-react:hover  { filter: drop-shadow(0 0 2em #61dafb); }
+  .logo-tauri:hover  { filter: drop-shadow(0 0 2em #24c8db); }
+}
+
+/* Dark mode — recommended to use class-based dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+}

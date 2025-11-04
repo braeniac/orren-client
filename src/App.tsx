@@ -7,14 +7,7 @@ function App() {
   
   return(
     <div className="App">
-      <input 
-        name="myInput"
-        value={input}
-        onChange={(e) => {
-          setInput(e.target.value); 
-        }} 
-      />
-      <p>{input}</p>
+      
     </div>  
   )
 }
