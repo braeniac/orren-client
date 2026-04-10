@@ -1,16 +1,21 @@
 import { useState } from 'react'; 
 
 export const Header = () => {
+  const [location] = useState("The hallow cave");
+  const [score] = useState(0); 
+  const [moves] = useState(3); 
     
-    const [location, ] = useState("The Hollow Of Orren");
-    const [moves, ] = useState(5); 
-    
-    return(
-        <div className='flex bg-[#519975] w-full justify-between'>
-           <div className='flex justify-between'>
-            <p className='pl-10'>{location}</p>
-            <p>Moves: {moves}</p>
-           </div>
+  return (
+    <div className="w-full bg-[#519975] px-6 py-2 text-[var(--text)] font-mono">
+      <div className="flex justify-between items-center">
+        <p className="uppercase tracking-wide">
+          LOCATION: {location}
+        </p>
+        <div className="flex gap-6">
+          <p>SCORE: {score}</p>
+          <p>MOVES: {moves}</p>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};

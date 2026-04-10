@@ -2,7 +2,7 @@
 
 > _"In the quiet ruins of Orren, echoes whisper of what once was… and what should have stayed forgotten."_
 
-**The Forgotten Depths of Orren** is a **text-based fantasy adventure** inspired by the classic *Zork* series — reimagined for the web.  
+**The Forgotten Depths of Orren** is a **text-based fantasy adventure** inspired by the classic *Zork* series.  
 
 Explore the ancient world of Orren through a command-line interface, uncover forgotten lore, solve puzzles, and descend into the depths where light dares not reach.
 
@@ -19,6 +19,21 @@ With only a flickering torch and your wits, you must:
 - 📖 **Unravel** — Piece together the story of Orren and its ancient depths.  
 
 Every command you type brings you closer to the truth — or to ruin.
+
+---
+
+## 🔧 Backend Engine
+
+The game logic and command parsing system are powered by a custom-built Java engine.
+
+👉 **Backend Repository:**  
+https://github.com/braeniac/orren-server
+
+This engine handles:
+- Command parsing (verbs, objects, directions)
+- Game state management
+- World interaction logic
+- Session-based gameplay API
 
 ---
 

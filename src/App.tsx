@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 // Default export so you can preview instantly.
 export default function TerminalScreen() {
   const [lines, setLines] = useState<string[]>([
-    "You awaken to the hollow echo of dripping water",
+    "You awaken to the hollow echo of dripping water.",
     "The air is cold and still, heavy with the scent of stone and time. You stand at the entrance of a crumbling stairway that winds downwards. Into the vast darkness, at your feet lies a rusted lantern. Far below, a faint hum vibrates through the stone.",
   ]);
   const [input, setInput] = useState("");
@@ -29,7 +29,7 @@ export default function TerminalScreen() {
   return (
     <div className="flex-row h-screen w-full bg-[var(--bg)] text-[var(--text)] font-mono overflow-hidden">
       <Header />
-      <div className="mx-auto max-w-5xl h-full grid grid-rows-[1fr_auto] p-4 md:p-6">
+      <div className="mx-auto max-w-6xl h-full grid grid-rows-[1fr_auto] p-4 md:p-6">
 
         <div ref={scrollRef} className="relative overflow-y-auto pr-1" aria-label="terminal-output">    
           <div className="h-[45vh] shrink-0" />
@@ -45,7 +45,7 @@ export default function TerminalScreen() {
           </div>
         </div>
 
-        <form onSubmit={onSubmit} className="pt-3 border-[var(--border)] mb-5">
+        <form onSubmit={onSubmit} className="pt-3 border-t border-[var(--border)] mb-5">
           <label className="sr-only" htmlFor="cmd">Command</label>
           <div className="flex items-center gap-2">
             <span className="text-brass">&gt;</span>
